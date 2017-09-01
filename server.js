@@ -3,10 +3,10 @@ var express = require('express'),
   port = process.env.PORT || 3000,
   mongoose = require('mongoose'),
   Task = require('./api/models/todoListModel'), 
-  //User = require('./api/models/UserModel'),
+  User = require('./api/models/UserModel'),
   Ground = require('./api/models/GroundModel'),
   City = require('./api/models/CityModel'),
-  //Pitch = require('./api/models/PitchModel'),
+  Pitch = require('./api/models/PitchModel'),
   bodyParser = require('body-parser');
   
 // mongoose instance connection url connection
