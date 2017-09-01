@@ -1,10 +1,10 @@
 'use strict';
 module.exports = function(app) {
   var todoList = require('../controllers/todoListController');
-  var userStuff = require('../controllers/UserController');
+  //var userStuff = require('../controllers/UserController');
   var groundStuff = require('../controllers/GroundController');
   var cityStuff = require('../controllers/CityController');
-  var pitchStuff = require('../controllers/PitchController');
+  //var pitchStuff = require('../controllers/PitchController');
 
   // todoList Routes
   app.route('/tasks')
