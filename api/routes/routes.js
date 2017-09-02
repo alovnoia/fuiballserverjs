@@ -89,9 +89,6 @@ module.exports = function(app) {
 
   // user Routes---------------------------------------------------------------------------
 
-  app.route('/user/order/:userId')
-    .post(userStuff.order);
-
   app.route('/user/change_password/:userId')
     .post(userStuff.change_password);
 
