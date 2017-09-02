@@ -1,10 +1,10 @@
 'use strict';
 module.exports = function(app) {
   var todoList = require('../controllers/todoListController');
-  var userStuff = require('../controllers/UserController');
-  var groundStuff = require('../controllers/GroundController');
+  /*var userStuff = require('../controllers/UserController');
+  var groundStuff = require('../controllers/GroundController');*/
   var cityStuff = require('../controllers/CityController');
-  var pitchStuff = require('../controllers/PitchController');
+  //var pitchStuff = require('../controllers/PitchController');
 
   // todoList Routes
   app.route('/tasks')
@@ -19,7 +19,7 @@ module.exports = function(app) {
 	
 // Pitch routes ------------------------------------------------------------------------
 
-  app.route('/pitch/add_pitch_to_ground/:groundId')
+  /*app.route('/pitch/add_pitch_to_ground/:groundId')
     .post(pitchStuff.add_pitch_to_ground);
 
   app.route('/pitch/update_status/:pitchId/:orderId')
@@ -41,7 +41,7 @@ module.exports = function(app) {
   app.route('/pitch/:pitchId')
     .get(pitchStuff.get_a_pitch)
     .put(pitchStuff.update_a_pitch)
-    .delete(pitchStuff.delete_a_pitch);
+    .delete(pitchStuff.delete_a_pitch);*/
 
   // City routes -------------------------------------------------------------------------
 
@@ -56,7 +56,7 @@ module.exports = function(app) {
 
   // Ground routes------------------------------------------------------------------------
 
-  app.route('/ground/remove_pitch_from_ground/:groundId/:pitchId')
+  /*app.route('/ground/remove_pitch_from_ground/:groundId/:pitchId')
     .post(groundStuff.remove_pitch_from_ground);
 
   app.route('/ground/delete_service/:groundId')
@@ -122,5 +122,5 @@ module.exports = function(app) {
 
     app.use(function(req, res) {
     res.status(404).send({url: req.originalUrl + ' not found'})
-  });
+  });*/
 };
