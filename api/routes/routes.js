@@ -1,10 +1,10 @@
 'use strict';
 module.exports = function(app) {
   var todoList = require('../controllers/todoListController');
-  //var userStuff = require('../controllers/UserController');
+  var userStuff = require('../controllers/UserController');
   var groundStuff = require('../controllers/GroundController');
-  //var cityStuff = require('../controllers/CityController');
-  //var pitchStuff = require('../controllers/PitchController');
+  var cityStuff = require('../controllers/CityController');
+  var pitchStuff = require('../controllers/PitchController');
 
   // todoList Routes
   app.route('/tasks')
@@ -19,7 +19,7 @@ module.exports = function(app) {
 	
 // Pitch routes ------------------------------------------------------------------------
 
-  /*app.route('/pitch/add_pitch_to_ground/:groundId')
+  app.route('/pitch/add_pitch_to_ground/:groundId')
     .post(pitchStuff.add_pitch_to_ground);
 
   app.route('/pitch/update_status/:pitchId/:orderId')
@@ -41,22 +41,22 @@ module.exports = function(app) {
   app.route('/pitch/:pitchId')
     .get(pitchStuff.get_a_pitch)
     .put(pitchStuff.update_a_pitch)
-    .delete(pitchStuff.delete_a_pitch);*/
+    .delete(pitchStuff.delete_a_pitch);
 
   // City routes -------------------------------------------------------------------------
 
-  /*app.route('/city')
+  app.route('/city')
     .get(cityStuff.list_all_city)
     .post(cityStuff.add_city);
 
   app.route('/city/:cityId')
     .get(cityStuff.get_a_city)
     .put(cityStuff.update_a_city)
-    .delete(cityStuff.delete_a_city);*/
+    .delete(cityStuff.delete_a_city);
 
   // Ground routes------------------------------------------------------------------------
 
-  /*app.route('/ground/remove_pitch_from_ground/:groundId/:pitchId')
+  app.route('/ground/remove_pitch_from_ground/:groundId/:pitchId')
     .post(groundStuff.remove_pitch_from_ground);
 
   app.route('/ground/delete_service/:groundId')
@@ -75,7 +75,7 @@ module.exports = function(app) {
     .post(groundStuff.favorite_ground);
 
   app.route('/ground/condition')
-    .post(groundStuff.get_grounds_with_condition);*/
+    .post(groundStuff.get_grounds_with_condition);
 
   app.route('/ground')
     .get(groundStuff.list_all_grounds)
@@ -89,7 +89,7 @@ module.exports = function(app) {
 
   // user Routes---------------------------------------------------------------------------
 
-  /*app.route('/user/order/:userId')
+  app.route('/user/order/:userId')
     .post(userStuff.order);
 
   app.route('/user/change_password/:userId')
@@ -118,7 +118,7 @@ module.exports = function(app) {
   app.route('/user/:userId')
     .get(userStuff.get_an_user)
     .put(userStuff.update_an_user)
-    .delete(userStuff.delete_an_user);*/
+    .delete(userStuff.delete_an_user);
 
     app.use(function(req, res) {
     res.status(404).send({url: req.originalUrl + ' not found'})

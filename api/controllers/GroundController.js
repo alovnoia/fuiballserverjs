@@ -4,7 +4,7 @@
 var mongoose = require('mongoose'),
   us = mongoose.model('Ground');
 
-/*exports.get_grounds_with_condition = function(req, res) {
+exports.get_grounds_with_condition = function(req, res) {
   if (req.body.area == '--') {
     us.find({city: req.body.city}, function(err, ground) {
       if (err)
@@ -18,7 +18,7 @@ var mongoose = require('mongoose'),
       res.json(ground);
     });
   }
-};*/
+};
 
 exports.list_all_grounds = function(req, res) {
   us.find({}, function(err, ground) {
@@ -83,7 +83,7 @@ exports.update_a_ground = function(req, res) {
   });
 };
 
-/*exports.remove_pitch_from_ground = function(req, res) {
+exports.remove_pitch_from_ground = function(req, res) {
   us.findOneAndUpdate({_id: req.params.groundId}, 
     {$pull: {menu: {pitch_id: req.params.pitchId}}},
    {new: true}, function(err, ground) {
@@ -91,7 +91,7 @@ exports.update_a_ground = function(req, res) {
       res.send(err);
     res.json(ground);
   });
-};*/
+};
 
 
 exports.delete_a_ground = function(req, res) {
@@ -105,7 +105,7 @@ exports.delete_a_ground = function(req, res) {
   });
 };
 
-/*exports.favorite_ground = function(req, res) {
+exports.favorite_ground = function(req, res) {
   us.find({'_id': {$in: req.body.lst_ground.split(",")}}, function(err, ground) {
     if (err)
       res.send(err);
@@ -155,4 +155,4 @@ exports.delete_service = function(req, res) {
       res.send(err);
     res.json(ground);
   });
-};*/
+};
