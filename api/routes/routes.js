@@ -1,8 +1,8 @@
 'use strict';
 module.exports = function(app) {
   var todoList = require('../controllers/todoListController');
-  /*var userStuff = require('../controllers/UserController');
-  var groundStuff = require('../controllers/GroundController');*/
+  //var userStuff = require('../controllers/UserController');
+  var groundStuff = require('../controllers/GroundController');
   var cityStuff = require('../controllers/CityController');
   //var pitchStuff = require('../controllers/PitchController');
 
@@ -56,7 +56,7 @@ module.exports = function(app) {
 
   // Ground routes------------------------------------------------------------------------
 
-  /*app.route('/ground/remove_pitch_from_ground/:groundId/:pitchId')
+  app.route('/ground/remove_pitch_from_ground/:groundId/:pitchId')
     .post(groundStuff.remove_pitch_from_ground);
 
   app.route('/ground/delete_service/:groundId')
@@ -89,7 +89,7 @@ module.exports = function(app) {
 
   // user Routes---------------------------------------------------------------------------
 
-  app.route('/user/order/:userId')
+  /*app.route('/user/order/:userId')
     .post(userStuff.order);
 
   app.route('/user/change_password/:userId')
@@ -118,9 +118,9 @@ module.exports = function(app) {
   app.route('/user/:userId')
     .get(userStuff.get_an_user)
     .put(userStuff.update_an_user)
-    .delete(userStuff.delete_an_user);
+    .delete(userStuff.delete_an_user);*/
 
     app.use(function(req, res) {
     res.status(404).send({url: req.originalUrl + ' not found'})
-  });*/
+  });
 };

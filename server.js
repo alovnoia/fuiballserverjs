@@ -4,8 +4,8 @@ var express = require('express'),
   mongoose = require('mongoose'),
   Task = require('./api/models/todoListModel'), 
   //User = require('./api/models/UserModel'),
-  //Ground = require('./api/models/GroundModel'),
-  City = require('./api/models/CityModel')
+  Ground = require('./api/models/GroundModel'),
+  City = require('./api/models/CityModel'),
   //Pitch = require('./api/models/PitchModel'),
   bodyParser = require('body-parser');
   
