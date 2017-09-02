@@ -3,7 +3,7 @@ module.exports = function(app) {
   var todoList = require('../controllers/todoListController');
   //var userStuff = require('../controllers/UserController');
   var groundStuff = require('../controllers/GroundController');
-  var cityStuff = require('../controllers/CityController');
+  //var cityStuff = require('../controllers/CityController');
   //var pitchStuff = require('../controllers/PitchController');
 
   // todoList Routes
@@ -45,14 +45,14 @@ module.exports = function(app) {
 
   // City routes -------------------------------------------------------------------------
 
-  app.route('/city')
+  /*app.route('/city')
     .get(cityStuff.list_all_city)
     .post(cityStuff.add_city);
 
   app.route('/city/:cityId')
     .get(cityStuff.get_a_city)
     .put(cityStuff.update_a_city)
-    .delete(cityStuff.delete_a_city);
+    .delete(cityStuff.delete_a_city);*/
 
   // Ground routes------------------------------------------------------------------------
 
