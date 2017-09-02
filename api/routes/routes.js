@@ -56,7 +56,7 @@ module.exports = function(app) {
 
   // Ground routes------------------------------------------------------------------------
 
-  app.route('/ground/remove_pitch_from_ground/:groundId/:pitchId')
+  /*app.route('/ground/remove_pitch_from_ground/:groundId/:pitchId')
     .post(groundStuff.remove_pitch_from_ground);
 
   app.route('/ground/delete_service/:groundId')
@@ -75,7 +75,7 @@ module.exports = function(app) {
     .post(groundStuff.favorite_ground);
 
   app.route('/ground/condition')
-    .post(groundStuff.get_grounds_with_condition);
+    .post(groundStuff.get_grounds_with_condition);*/
 
   app.route('/ground')
     .get(groundStuff.list_all_grounds)
